@@ -1,0 +1,29 @@
+cors:
+  allow_any_origin: true
+supergraph:
+  path: /graphql
+  listen: 0.0.0.0:4000
+  introspection: true
+include_subgraph_errors:
+  all: true
+sandbox:
+  enabled: true
+homepage:
+  enabled: false
+headers:
+  all:
+    request:
+      - propagate:
+          matching: .*
+
+# Optimization
+traffic_shaping:
+  deduplicate_variables: true # Enable the variable deduplication optimization.
+  router: # Rules applied to requests from clients to the router
+    global_rate_limit: # Accept a maximum of 10 requests per 5 secs. Excess requests must be rejected.
+      capacity: 5
+      interval: 1s # Must not be greater than 18_446_744_073_709_551_615 milliseconds and not less than 0 milliseconds
+    timeout: 50s # If a request to the router takes more than 50secs then cancel the request (30 sec by default)
+  all:
+    deduplicate_query: true # Enable query deduplication for all subgraphs.
+    compression: gzip # Enable gzip compression for all subgraphs.

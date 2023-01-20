@@ -1,0 +1,9 @@
+{
+  "debug.javascript.autoAttachFilter": "onlyWithFlag",
+  "debug.autoExpandLazyVariables": true,
+  "debug.console.acceptSuggestionOnEnter": "on",
+  "debug.console.closeOnEnd": true,
+  "eslint.validate": ["json"],
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true
+}

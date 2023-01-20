@@ -1,0 +1,25 @@
+[
+    {
+        "_id": {
+            "$oid": "63c7e355d1bc6fac460264c3"
+        },
+        "name": "Vemund",
+        "email": "vemund@salire.no",
+        "phone": "+4742638504"
+    },
+    {
+        "_id": {
+            "$oid": "63c7e355d1bc6fac460264c4"
+        },
+        "name": "Sergio",
+        "email": "sergio@salire.no",
+        "phone": "+34639213456"
+    },
+    {
+        "_id": {
+            "$oid": "63c7e355d1bc6fac460264c5"
+        },
+        "name": "%NAME%",
+        "email": "%NAME%@salire.no"
+    }
+]

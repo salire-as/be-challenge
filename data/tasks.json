@@ -1,0 +1,66 @@
+[
+    {
+        "_id": {
+            "$oid": "63c92a1988bbc68cce0eb6ef"
+        },
+        "name": "Prepare interview with %NAME%",
+        "done": true,
+        "creator": {
+            "$oid": "63c7e355d1bc6fac460264c3"
+        },
+        "assigned": [
+            { "$oid": "63c7e355d1bc6fac460264c3" }
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "63c92a1988bbc68cce0eb6f0"
+        },
+        "name": "Interview %NAME%",
+        "done": true,
+        "creator": {
+            "$oid": "63c7e355d1bc6fac460264c3"
+        },
+        "assigned": [
+            { "$oid": "63c7e355d1bc6fac460264c3" },
+            { "$oid": "63c7e355d1bc6fac460264c4" }
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "63c92a1988bbc68cce0eb6f1"
+        },
+        "name": "Send code challenge",
+        "done": true,
+        "creator": {
+            "$oid": "63c7e355d1bc6fac460264c4"
+        },
+        "assigned": [
+            { "$oid": "63c7e355d1bc6fac460264c4" }
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "63c92a1988bbc68cce0eb6f2"
+        },
+        "name": "Review challenge from %NAME%",
+        "done": false,
+        "creator": {
+            "$oid": "63c7e355d1bc6fac460264c4"
+        },
+        "assigned": [
+            { "$oid": "63c7e355d1bc6fac460264c4" }
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "63c92a1988bbc68cce0eb6f3"
+        },
+        "name": "Handover results to %NAME%",
+        "done": false,
+        "creator": {
+            "$oid": "63c7e355d1bc6fac460264c3"
+        },
+        "assigned": []
+    }
+]

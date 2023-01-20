@@ -1,0 +1,26 @@
+version: "3.9"
+
+services:
+  mongodb:
+    image: mongo
+    ports:
+      - "27017:27017"
+      
+  apollo-router:
+    image: ghcr.io/apollographql/router:v1.8.0
+    restart: unless-stopped
+    volumes:
+      - "./router.yml:/tmp/router.yaml"
+    command: ["-c", "/tmp/router.yaml"]
+    ports:
+      - "4000:4000"
+    environment:
+      - APOLLO_KEY=service:aiflow-challenge:S6ZyMGjWnl_Oyn584Ts5og
+      - APOLLO_GRAPH_REF=aiflow-challenge@${MY_NAME}
+
+  mongo_seed:
+    build: ./data
+    environment:
+        - MY_NAME=${MY_NAME}
+    depends_on:
+      - mongodb

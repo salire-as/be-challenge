@@ -1,0 +1,24 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@salire-as/apollo-rover": ["libs/apollo-rover/src/index.ts"],
+      "@salire-as/config": ["libs/config/src/index.ts"],
+      "@salire-as/graphql": ["libs/graphql/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}
